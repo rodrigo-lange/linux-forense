@@ -9,7 +9,7 @@ apt dist-upgrade -y
 apt upgrade -y
 apt autoremove -y
 apt install linux-headers-$(uname -r) -y
-apt install python3-pip python-setuptools build-essential python-dev -y
+apt install python3-pip python-setuptools build-essential python-dev dwarfdump -y
 
 #instala o PIP2
 cd ~

@@ -5,8 +5,8 @@ cd ~
 
 #atualiza e instala os pacotes essenciais
 apt update
-apt dist-upgrade
-apt upgrade
+apt dist-upgrade -y
+apt upgrade -y
 apt autoremove
 apt install linux-headers-$(uname -r)
 apt install python3-pip python-setuptools build-essential python-dev -y

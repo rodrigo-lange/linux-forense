@@ -8,7 +8,7 @@ apt update
 apt dist-upgrade -y
 apt upgrade -y
 apt autoremove
-apt install linux-headers-$(uname -r)
+apt install linux-headers-$(uname -r) -y
 apt install python3-pip python-setuptools build-essential python-dev -y
 
 #instala o PIP2

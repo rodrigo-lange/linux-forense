@@ -16,6 +16,12 @@ cd ~
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
 python get-pip.py
 
+#instala as dependencias do volatility
+pip3 install --upgrade setuptools
+pip2 install --upgrade setuptools
+pip2 install pycrypto
+pip2 install distorm3==3.4.4 
+
 #instala o volatility
 cd ~
 git clone https://github.com/volatilityfoundation/volatility.git 
@@ -29,12 +35,6 @@ cd tools/linux
 make
 cd ~
 zip volatility/volatility/plugins/overlays/linux/$(lsb_release -i -s)_$(uname -r)_profile.zip ./volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
-
-#instala as dependencias do volatility
-pip3 install --upgrade setuptools
-pip2 install --upgrade setuptools
-pip2 install pycrypto
-pip2 install distorm3==3.4.4 
 
 #instala plaso e log2timeline
 cd ~

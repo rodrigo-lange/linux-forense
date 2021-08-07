@@ -35,6 +35,8 @@ cd tools/linux
 make
 cd ~
 #zip volatility/volatility/plugins/overlays/linux/$(lsb_release -i -s)_$(uname -r)_profile.zip ./volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
+cd ~/volatility/volatility/plugins/overlays/linux/
+wget https://github.com/rodrigo-lange/linux-forense/blob/c6132fc619c0eaba1e649e628af393e121818d08/profile.zip
 
 #instala plaso e log2timeline
 cd ~

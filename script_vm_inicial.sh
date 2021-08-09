@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#vai para pasta home
+#entra para pasta home
 cd ~
 
 #atualiza e instala os pacotes essenciais
@@ -15,8 +15,9 @@ apt install python3-pip python-setuptools build-essential python-dev dwarfdump -
 cd ~
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
 python get-pip.py
+rm get-pip.py
 
-#instala as dependencias do volatility
+#instala todas dependencias do volatility
 pip3 install --upgrade setuptools
 pip2 install --upgrade setuptools
 pip2 install pycrypto
@@ -30,7 +31,7 @@ chmod +x vol.py
 #python setup.py build 
 #python setup.py build install
 
-#cria o perfil do volatility
+#baixa o perfil do volatility
 cd tools/linux
 make
 cd ~

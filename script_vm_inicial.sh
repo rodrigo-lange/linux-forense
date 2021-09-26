@@ -2,6 +2,7 @@
 
 #entra para pasta home
 cd ~
+echo setxkbmap -model abnt2 -layout br >> .zshrc
 
 #atualiza e instala os pacotes essenciais
 apt update

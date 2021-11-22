@@ -1,16 +1,21 @@
 #!/bin/bash
 
-#entra para pasta home
+#entrar na pasta home
 cd ~
+
+#configurar o teclado ABNT2
 echo setxkbmap -model abnt2 -layout br >> .zshrc
 
-#atualiza e instala os pacotes essenciais
+#configura para reiniciar os serviços automaticamente
+export DEBIAN_FRONTEND=noninteractive
+
+#instala os pacotes essenciais
+apt install python3-pip python-setuptools build-essential python2-dev dwarfdump -y
+
+#atualiza a VM
 apt update
-apt dist-upgrade -y
-apt upgrade -y
+apt dist-upgrade --fix-missing -y
 apt autoremove -y
-apt install linux-headers-$(uname -r) -y
-apt install python3-pip python-setuptools build-essential python-dev dwarfdump -y
 
 #instala o PIP2
 cd ~
@@ -38,7 +43,7 @@ make
 cd ~
 #zip volatility/volatility/plugins/overlays/linux/$(lsb_release -i -s)_$(uname -r)_profile.zip ./volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
 cd ~/volatility/volatility/plugins/overlays/linux/
-wget https://github.com/rodrigo-lange/linux-forense/raw/main/profile.zip
+wget -N https://github.com/rodrigo-lange/linux-forense/raw/main/profile.zip
 
 #instala plaso e log2timeline
 cd ~

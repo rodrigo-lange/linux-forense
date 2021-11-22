@@ -34,14 +34,8 @@ cd ~
 git clone https://github.com/volatilityfoundation/volatility.git 
 cd volatility 
 chmod +x vol.py
-#python setup.py build 
-#python setup.py build install
 
 #baixa o perfil do volatility
-cd tools/linux
-make
-cd ~
-#zip volatility/volatility/plugins/overlays/linux/$(lsb_release -i -s)_$(uname -r)_profile.zip ./volatility/tools/linux/module.dwarf /boot/System.map-$(uname -r)
 cd ~/volatility/volatility/plugins/overlays/linux/
 wget -N https://github.com/rodrigo-lange/linux-forense/raw/main/profile.zip
 
@@ -53,3 +47,4 @@ python3 setup.py build
 python3 setup.py build install
 pip3 install -r requirements.txt
 pip3 install fakeredis
+pip3 install mock

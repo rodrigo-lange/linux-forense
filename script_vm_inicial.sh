@@ -48,3 +48,4 @@ python3 setup.py build install
 pip3 install -r requirements.txt
 pip3 install fakeredis
 pip3 install mock
+cd ~

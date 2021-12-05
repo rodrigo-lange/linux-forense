@@ -9,13 +9,12 @@ echo setxkbmap -model abnt2 -layout br >> .zshrc
 #configura para reiniciar os serviços automaticamente
 export DEBIAN_FRONTEND=noninteractive
 
-#instala os pacotes essenciais
-apt install python3-pip python-setuptools build-essential python2-dev dwarfdump -y
-
 #atualiza a VM
 apt update
 apt dist-upgrade --fix-missing -y
-apt autoremove -y
+
+#instala os pacotes essenciais
+apt install python3-pip python-setuptools build-essential python2-dev dwarfdump -y
 
 #instala o PIP2
 cd ~

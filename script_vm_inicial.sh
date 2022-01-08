@@ -42,7 +42,15 @@ cd /usr/local/lib/python2.7/dist-packages/volatility/plugins/overlays/linux/
 wget -N https://github.com/rodrigo-lange/linux-forense/raw/main/profile.zip
 
 # instala plaso e log2timeline
-apt install -y plaso python3-plaso
+#apt install -y plaso python3-plaso
+cd ~
+git clone https://github.com/log2timeline/plaso.git
+cd plaso
+python3 setup.py build
+python3 setup.py build install
+pip3 install -r requirements.txt
+pip3 install fakeredis
+pip3 install mock
 
 # volta para pasta root
 cd ~

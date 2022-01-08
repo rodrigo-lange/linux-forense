@@ -28,10 +28,6 @@ pip3 install -r requirements.txt
 pip3 install fakeredis
 pip3 install mock
 
-
-
-
-
 # Instala o Volatility
 # Instruções em: https://seanthegeek.net/1172/how-to-install-volatility-2-and-volatility-3-on-debian-ubuntu-or-kali-linux/
 # instala os pacotes essenciais do Volatility
@@ -47,13 +43,6 @@ sudo python2 -m pip install -U setuptools wheel
 sudo python2 -m pip install -U distorm3 yara pycrypto pillow openpyxl ujson pytz ipython capstone
 sudo ln -s /usr/local/lib/python2.7/dist-packages/usr/lib/libyara.so /usr/lib/libyara.so
 sudo python2 -m pip install -U git+https://github.com/volatilityfoundation/volatility.git
-
-# instala o pip para o Python 3
-#sudo apt install -y python3 python3-dev libpython3-dev python3-pip python3-setuptools python3-wheel
-
-# instala o Volatility 3 e suas dependências do Python
-#sudo python3 -m pip install -U distorm3 yara pycrypto pillow openpyxl ujson pytz ipython capstone
-#sudo python3 -m pip install -U git+https://github.com/volatilityfoundation/volatility3.git
 
 # baixa o perfil do Linux do volatility
 cd /usr/local/lib/python2.7/dist-packages/volatility/plugins/overlays/linux/

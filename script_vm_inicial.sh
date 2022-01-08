@@ -13,6 +13,16 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt update
 sudo apt dist-upgrade --fix-missing -y
 
+# instala plaso e log2timeline (por incompatibilidade entre as bibliotecas Yara do Volatility e do Plaso, optou-se pela instalação via docker)
+#sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+#echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+#sudo apt-get install -y docker.io
+#sudo systemctl enable docker --now
+#docker pull log2timeline/plaso
+
+
+
+
 # Instala o Volatility
 # Instruções em: https://seanthegeek.net/1172/how-to-install-volatility-2-and-volatility-3-on-debian-ubuntu-or-kali-linux/
 # instala os pacotes essenciais do Volatility
@@ -40,13 +50,6 @@ sudo python3 -m pip install -U git+https://github.com/volatilityfoundation/volat
 # baixa o perfil do Linux do volatility
 cd /usr/local/lib/python2.7/dist-packages/volatility/plugins/overlays/linux/
 sudo wget -N https://github.com/rodrigo-lange/linux-forense/raw/main/profile.zip
-
-# instala plaso e log2timeline (por incompatibilidade entre as bibliotecas Yara do Volatility e do Plaso, optou-se pela instalação via docker)
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get install -y docker.io
-sudo systemctl enable docker --now
-docker pull log2timeline/plaso
 
 # volta para pasta root
 cd ~

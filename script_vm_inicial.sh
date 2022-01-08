@@ -19,7 +19,14 @@ sudo apt dist-upgrade --fix-missing -y
 #sudo apt-get install -y docker.io
 #sudo systemctl enable docker --now
 #docker pull log2timeline/plaso
-
+cd ~
+git clone https://github.com/log2timeline/plaso.git
+cd plaso
+python3 setup.py build
+python3 setup.py build install
+pip3 install -r requirements.txt
+pip3 install fakeredis
+pip3 install mock
 
 
 

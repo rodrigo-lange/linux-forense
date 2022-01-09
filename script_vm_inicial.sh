@@ -10,8 +10,8 @@ echo setxkbmap -model abnt2 -layout br >> .zshrc
 export DEBIAN_FRONTEND=noninteractive
 
 # atualiza a VM
-sudo apt update
-sudo apt dist-upgrade --fix-missing -y
+apt update
+apt dist-upgrade --fix-missing -y
 
 # instala plaso e log2timeline (por incompatibilidade entre as bibliotecas Yara do Volatility e do Plaso, optou-se pela instalação via docker)
 #sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg

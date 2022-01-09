@@ -13,12 +13,7 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt dist-upgrade --fix-missing -y
 
-# instala plaso e log2timeline (por incompatibilidade entre as bibliotecas Yara do Volatility e do Plaso, optou-se pela instalação via docker)
-#sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-#echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-#sudo apt-get install -y docker.io
-#sudo systemctl enable docker --now
-#docker pull log2timeline/plaso
+# instala plaso e log2timeline
 cd ~
 git clone https://github.com/log2timeline/plaso.git
 cd plaso
@@ -30,7 +25,7 @@ pip3 install mock
 
 # Instala o Volatility
 # Instruções em: https://seanthegeek.net/1172/how-to-install-volatility-2-and-volatility-3-on-debian-ubuntu-or-kali-linux/
-# instala os pacotes essenciais do Volatility
+# instala os pacotes essenciais do Volatility 2.6
 sudo apt install -y build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata
 
 # instala o pip para Python 2

@@ -10,10 +10,18 @@ echo setxkbmap -model abnt2 -layout br >> .zshrc
 export DEBIAN_FRONTEND=noninteractive
 
 # atualiza a VM
+echo " "
+echo "========================================================="
+echo "Atualizando a VM"
+echo "========================================================="
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt dist-upgrade --fix-missing -y
 
 # instala plaso e log2timeline
+echo " "
+echo "========================================================="
+echo "Instalando Plaso e Log2Timeline"
+echo "========================================================="
 cd ~
 git clone https://github.com/log2timeline/plaso.git
 cd plaso
@@ -24,8 +32,13 @@ pip3 install fakeredis
 pip3 install mock
 
 # Instala o Volatility
+echo " "
+echo "========================================================="
+echo "Instalando Volatility"
+echo "========================================================="
 # Instruções em: https://seanthegeek.net/1172/how-to-install-volatility-2-and-volatility-3-on-debian-ubuntu-or-kali-linux/
 # instala os pacotes essenciais do Volatility 2.6
+cd ~
 sudo apt install -y build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata
 
 # instala o pip para Python 2
@@ -33,8 +46,11 @@ sudo apt install -y python2 python2.7-dev libpython2-dev
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 sudo python2 get-pip.py
 sudo python2 -m pip install -U setuptools wheel
+python2 -m pip install --upgrade pip
 
 # instala o Volatility 2 e suas dependências do Python
+sudo python2 -m pip install -U distorm3 yara pycrypto pillow openpyxl ujson pytz ipython capstone
+sudo python2 -m pip install -U distorm3 yara pycrypto pillow openpyxl ujson pytz ipython capstone
 sudo python2 -m pip install -U distorm3 yara pycrypto pillow openpyxl ujson pytz ipython capstone
 sudo ln -s /usr/local/lib/python2.7/dist-packages/usr/lib/libyara.so /usr/lib/libyara.so
 sudo python2 -m pip install -U git+https://github.com/volatilityfoundation/volatility.git
@@ -44,5 +60,9 @@ cd /usr/local/lib/python2.7/dist-packages/volatility/plugins/overlays/linux/
 sudo wget -N https://github.com/rodrigo-lange/linux-forense/raw/main/profile.zip
 
 # volta para pasta root e remove pacotes não necessários
+echo " "
+echo "========================================================="
+echo "Instalação finalizada"
+echo "========================================================="
 apt autoremove -y
 cd ~

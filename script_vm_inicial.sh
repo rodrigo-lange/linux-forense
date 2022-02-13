@@ -23,13 +23,14 @@ echo "========================================================="
 echo "Instalando Plaso e Log2Timeline"
 echo "========================================================="
 cd ~
-git clone https://github.com/log2timeline/plaso.git
-cd plaso
-python3 setup.py build
-python3 setup.py build install
-pip3 install -r requirements.txt
-pip3 install fakeredis
-pip3 install mock
+#git clone https://github.com/log2timeline/plaso.git
+#cd plaso
+#python3 setup.py build
+#python3 setup.py build install
+#pip3 install -r requirements.txt
+#pip3 install fakeredis
+#pip3 install mock
+sudo apt install -y plaso
 
 # Instala o Volatility
 echo " "

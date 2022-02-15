@@ -15,7 +15,7 @@ echo "========================================================="
 echo "Atualizando a VM"
 echo "========================================================="
 sudo apt update
-sudo DEBIAN_FRONTEND=noninteractive apt dist-upgrade --fix-missing -y
+sudo DEBIAN_FRONTEND=noninteractive apt full-upgrade --fix-missing -y
 
 # instala plaso e log2timeline
 echo " "

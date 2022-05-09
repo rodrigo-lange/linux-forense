@@ -24,13 +24,6 @@ echo "========================================================="
 echo "Instalando Plaso e Log2Timeline"
 echo "========================================================="
 cd ~
-#git clone https://github.com/log2timeline/plaso.git
-#cd plaso
-#python3 setup.py build
-#python3 setup.py build install
-#pip3 install -r requirements.txt
-#pip3 install fakeredis
-#pip3 install mock
 sudo apt install -y plaso
 
 # Instala o Volatility
@@ -51,7 +44,6 @@ sudo python2 -m pip install -U setuptools wheel
 python2 -m pip install --upgrade pip
 
 # instala o Volatility 2 e suas dependências do Python
-#sudo python2 -m pip install -U distorm3 yara pycrypto pillow openpyxl ujson pytz ipython capstone
 sudo python2 -m pip install -U distorm3 yara pycrypto pillow openpyxl pytz ipython capstone
 sudo ln -s /usr/local/lib/python2.7/dist-packages/usr/lib/libyara.so /usr/lib/libyara.so
 sudo python2 -m pip install -U git+https://github.com/volatilityfoundation/volatility.git

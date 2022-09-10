@@ -55,7 +55,10 @@ sudo wget -N https://github.com/rodrigo-lange/linux-forense/raw/main/profile.zip
 # volta para pasta root e remove pacotes não necessários
 echo " "
 echo "========================================================="
-echo "Instalação finalizada"
+echo "Removendo pacotes desnecessários"
 echo "========================================================="
 apt autoremove -y
 cd ~
+echo "========================================================="
+echo "Instalação finalizada com sucesso"
+echo "========================================================="

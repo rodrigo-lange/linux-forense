@@ -17,7 +17,7 @@ echo "========================================================="
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt full-upgrade --fix-missing -y
 sudo apt install dkms -y
-
+ 
 # instala plaso e log2timeline
 echo " "
 echo "========================================================="

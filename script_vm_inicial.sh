@@ -62,3 +62,7 @@ cd ~
 echo "========================================================="
 echo "Instalação finalizada com sucesso"
 echo "========================================================="
+
+# Para instalar a caveira no prompt
+# sed -i 's/prompt_symbol=㉿/prompt_symbol=💀/' ~/.zshrc
+# source ~/.zshrc

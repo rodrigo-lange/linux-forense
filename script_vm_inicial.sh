@@ -24,7 +24,8 @@ echo "========================================================="
 echo "Instalando Plaso e Log2Timeline"
 echo "========================================================="
 cd ~
-sudo apt install -y plaso
+apt install docker.io -y
+docker pull log2timeline/plaso
 
 # Instala o Volatility
 echo " "

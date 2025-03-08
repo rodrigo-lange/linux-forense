@@ -3,6 +3,10 @@
 # entra na pasta home
 cd ~
 
+# desabilita a proteção de tela
+echo xset -dpms >> .zshrc
+echo xset s off >> .zshrc
+
 # configura o teclado ABNT2
 echo setxkbmap -model abnt2 -layout br >> .zshrc
 

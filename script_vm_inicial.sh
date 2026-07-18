@@ -39,7 +39,7 @@ echo "========================================================="
 # Instruções em: https://seanthegeek.net/1172/how-to-install-volatility-2-and-volatility-3-on-debian-ubuntu-or-kali-linux/
 # instala os pacotes essenciais do Volatility 2.6
 cd ~
-sudo apt install -y build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata libcrypt-dev python2 python2-dev build-essential libdistorm3-dev 
+sudo apt install -y build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata libcrypt-dev python2 python2-dev build-essential libdistorm3-dev libssl-dev
 
 # instala o pip para Python 2
 sudo apt install -y python2 python2.7-dev libpython2-dev

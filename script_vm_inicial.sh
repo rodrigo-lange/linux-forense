@@ -50,9 +50,9 @@ python2 -m pip install --upgrade pip
 
 # instala o Volatility 2 e suas dependências do Python
 sudo python2 -m pip install -U yara pillow openpyxl pytz ipython capstone
-pip install pycryptodome
 python2 -m pip install --no-cache-dir distorm3==3.4.4
 sudo ln -s /usr/local/lib/python2.7/dist-packages/usr/lib/libyara.so /usr/lib/libyara.so
+sudo python2 -m pip install pycrypto
 sudo python2 -m pip install -U git+https://github.com/volatilityfoundation/volatility.git
 
 # baixa o perfil do Linux do volatility

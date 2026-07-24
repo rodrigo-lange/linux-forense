@@ -58,6 +58,7 @@ sudo python2 -m pip install -U git+https://github.com/volatilityfoundation/volat
 # baixa o perfil do Linux do volatility
 cd /usr/local/lib/python2.7/dist-packages/volatility/plugins/overlays/linux/
 sudo wget -N https://github.com/rodrigo-lange/linux-forense/raw/main/profile.zip
+mv /usr/local/bin/vol.py /usr/local/bin/vol2.py
 
 echo " "
 echo "========================================================="

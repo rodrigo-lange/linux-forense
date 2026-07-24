@@ -34,7 +34,7 @@ docker pull log2timeline/plaso
 # Instala o Volatility
 echo " "
 echo "========================================================="
-echo "Instalando Volatility"
+echo "Instalando Volatility 2"
 echo "========================================================="
 # Instruções em: https://seanthegeek.net/1172/how-to-install-volatility-2-and-volatility-3-on-debian-ubuntu-or-kali-linux/
 # instala os pacotes essenciais do Volatility 2.6
@@ -58,6 +58,16 @@ sudo python2 -m pip install -U git+https://github.com/volatilityfoundation/volat
 # baixa o perfil do Linux do volatility
 cd /usr/local/lib/python2.7/dist-packages/volatility/plugins/overlays/linux/
 sudo wget -N https://github.com/rodrigo-lange/linux-forense/raw/main/profile.zip
+
+echo " "
+echo "========================================================="
+echo "Instalando Volatility 3"
+echo "========================================================="
+cd /opt
+git clone https://github.com/volatilityfoundation/volatility3.git
+cd volatility3
+mv vol.py vol3.py
+ln -sf $(pwd)/vol3.py /usr/bin/vol3.py
 
 # volta para pasta root e remove pacotes não necessários
 echo " "

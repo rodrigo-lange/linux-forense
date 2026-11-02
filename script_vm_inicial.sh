@@ -10,6 +10,9 @@ echo xset s off >> .zshrc
 # configura o teclado ABNT2
 echo setxkbmap -model abnt2 -layout br >> .zshrc
 
+# habilita o fzf
+source <(fzf --zsh)
+
 # configura para reiniciar os serviços automaticamente
 export DEBIAN_FRONTEND=noninteractive
 
@@ -20,7 +23,7 @@ echo "Atualizando a VM"
 echo "========================================================="
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt full-upgrade --fix-missing -y
-sudo apt install dkms -y
+sudo apt install fzf dkms -y
  
 # instala plaso e log2timeline
 echo " "
@@ -77,6 +80,7 @@ echo "Removendo pacotes desnecessários"
 echo "========================================================="
 apt autoremove -y
 cd ~
+
 echo "========================================================="
 echo "Instalação finalizada com sucesso"
 echo "========================================================="
